@@ -1,43 +1,41 @@
 $(document).ready(() => {
-    var sections = [];
-    var scrolled_id = false;
-    var id = false;
-    var $navbar = $('.scrolling-pointer');
-    var $navbar__links = $navbar.find('.navbar__link');
+    var sections = []
+    var scrolled_id = false
+    var id = false
+    var $navbar = $('.scrolling-pointer')
+    var $navbar__links = $navbar.find('.navbar__link')
 
-    $navbar__links.each(function(){
-        sections.push($($(this).attr('href')));
-    });
+    $navbar__links.each(function() {
+        sections.push($($(this).attr('href')))
+    })
 
-    $navbar__links.click(function(e){
-        e.preventDefault();
+    $navbar__links.click(function(e) {
+        e.preventDefault()
 
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
-        });
-    });
+        })
+    })
 
-    $(window).scroll(function(e){
-        e.preventDefault();
-        var scrollTop = $(this).scrollTop() + ($(window).height() / 3);
+    $(window).scroll(function(e) {
+        e.preventDefault()
+        var scrollTop = $(this).scrollTop() + ($(window).height() / 300)
 
+        for(var i in sections) {
+            var section = sections[i]
 
-        for(var i in sections){
-            var section = sections[i];
-
-            if(scrollTop > section.offset().top){
-                scrolled_id = section.attr('id');   
+            if(scrollTop > section.offset().top) {
+                scrolled_id = section.attr('id')   
             }
 
-            if(scrolled_id !== id){
-                id = scrolled_id;
-
-                $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current');
+            if(scrolled_id !== id) {
+                id = scrolled_id
+                $navbar__links.removeClass('navbar__link--current')
             }
         }
-    });
+    })
 
-    $(window).trigger('scroll');
+    $(window).trigger('scroll')
 
 
     // Media Query
@@ -47,8 +45,8 @@ $(document).ready(() => {
         // Fijar la barra de navegacion
         $(window).scroll(() => {
             //console.log($(this).scrollTop())                  
-
-            if ($(this).scrollTop() > 2279) {                     
+            
+            if ($(this).scrollTop() > 2726) {                     
                 $('.scrolling-pointer').css({
                     'position': 'fixed',
                     'top': '0',
@@ -71,8 +69,8 @@ $(document).ready(() => {
         // Fijar la barra de navegacion
         $(window).scroll(() => {
             //console.log($(this).scrollTop())                  
-
-            if ($(this).scrollTop() > 852) {                       
+            
+            if ($(this).scrollTop() > 1500) {                       
                 $('.scrolling-pointer').css({
                     'position': 'fixed',
                     'top': '0',

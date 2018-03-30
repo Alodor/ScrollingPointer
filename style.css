@@ -18,11 +18,13 @@ h1 {
     text-align: center;
     font-size: 3em;
     margin-bottom: 40px;
+    color: #fff;
 }
 
 p {
     text-align: justify;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .scrolling-pointer ul {
@@ -39,7 +41,7 @@ p {
     align-items: center;
     width: 24.5%;
     height: 50px;
-    background-color: #E5E7E9;
+    background-color: #e5e7e9;
     position: relative;
 }
 
@@ -52,53 +54,58 @@ p {
     top: 0;
     bottom: 0;
     text-decoration: none;
-    color: #85929E;
+    color: #85929e;
 }
 
 .navbar__link--current{
-    background-color: dodgerblue;
     color: #fff;
 }
 
 #link-one.navbar__link--current{
-    background-color: #ff6600;
+    background-color: #ffeb3b;
 }
 
 #link-two.navbar__link--current{
-    background-color: #E8A353;
+    background-color: #ff9800;
 }
 
 #link-three.navbar__link--current{
-    background-color: #3DA359;
+    background-color: #009688;
 }
 
 #link-four.navbar__link--current{
-    background-color: #198dfe;
+    background-color: #2196f3;
 }
 
 .porcion {
     height: 100vh; 
     line-height: 100vh;
+    color: #fff;
 }
 
 #one {
-    background-color: deepskyblue;
+    background-color: #ffeb3b;
 }
 
 #two {
-    background-color: lawngreen;
+    background-color: #ff9800;
 }
 
 #three {
-    background-color: firebrick;
+    background-color: #009688;
 }
 
 #four {
 
-    background-color: aqua;
+    background-color: #2196f3;
 }
 
 @media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+        margin-left: 1%;
+    }
+    
     .scrolling-pointer ul {
         flex-direction: row;
         flex-wrap: wrap;
