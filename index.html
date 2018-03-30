@@ -1,0 +1,283 @@
+<!Doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Scrolling Pointer</title>
+    </head>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #f6f6f6;
+        }
+        
+        .container {
+            width: 80%;
+            margin-left: 10%;
+            padding: 30px 15px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+        
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        
+        .scrolling-pointer ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #fff;
+        }
+        
+        .scrolling-pointer .tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24.5%;
+            height: 50px;
+            background-color: #E5E7E9;
+            position: relative;
+        }
+        
+        .navbar__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            text-decoration: none;
+            color: #85929E;
+        }
+        
+        .navbar__link--current{
+            background-color: dodgerblue;
+            color: #fff;
+        }
+        
+        #link-one.navbar__link--current{
+            background-color: #ff6600;
+        }
+        
+        #link-two.navbar__link--current{
+            background-color: #E8A353;
+        }
+        
+        #link-three.navbar__link--current{
+            background-color: #3DA359;
+        }
+        
+        #link-four.navbar__link--current{
+            background-color: #198dfe;
+        }
+        
+        .porcion {
+            height: 100vh; 
+            line-height: 100vh;
+        }
+        
+        #one {
+            background-color: deepskyblue;
+        }
+        
+        #two {
+            background-color: lawngreen;
+        }
+        
+        #three {
+            background-color: firebrick;
+        }
+        
+        #four {
+            
+            background-color: aqua;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .scrolling-pointer ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .scrolling-pointer .tab {
+                width: 50%;
+                height: 50px;
+            }
+        }
+    </style>
+    
+    <body>
+        <section class="container">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ullam quis repellat impedit quam ut qui porro dicta, earum, necessitatibus accusantium deleniti atque. Doloribus tempora alias, sit saepe. Nisi, unde!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, excepturi. A recusandae amet ipsum, in eligendi, iure, corporis nulla praesentium tenetur, doloribus error laborum obcaecati natus sequi inventore vitae reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eius rerum ut facere quidem voluptas id minus accusantium laboriosam cupiditate blanditiis pariatur odit facilis, odio, neque recusandae reiciendis illum laborum!</p>
+        </section>
+        
+        <nav class="scrolling-pointer">
+            <ul>
+                <li class="tab">
+                    <a href="#one" id="link-one" class="navbar__link">01. Attract</a>
+                </li>
+                
+                <li class="tab">
+                    <a href="#two" id="link-two" class="navbar__link">02. Convert</a>
+                </li>
+                
+                <li class="tab">
+                    <a href="#three" id="link-three" class="navbar__link">03. Close</a>
+                </li>
+                    
+                <li class="tab">
+                    <a href="#four" id="link-four" class="navbar__link">04. Delight</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <section id="one" class="porcion">
+            <h2>Section one title</h2>    
+        </section>
+        
+        <section id="two" class="porcion">
+            <h2>Section two title</h2>
+        </section>
+        
+        <section id="three" class="porcion">
+            <h2>Section three title</h2>
+        </section>
+        
+        <section id="four" class="porcion">
+            <h2>Section four title</h2>
+        </section>
+        
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                var sections = [];
+                var scrolled_id = false;
+                var id = false;
+                var $navbar = $('.scrolling-pointer');
+                var $navbar__links = $navbar.find('.navbar__link');
+
+                $navbar__links.each(function(){
+                    sections.push($($(this).attr('href')));
+                });
+
+                $navbar__links.click(function(e){
+                    e.preventDefault();
+
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top
+                    });
+                });
+
+                $(window).scroll(function(e){
+                    e.preventDefault();
+                    var scrollTop = $(this).scrollTop() + ($(window).height() / 3);
+
+
+                    for(var i in sections){
+                        var section = sections[i];
+
+                        if(scrollTop > section.offset().top){
+                            scrolled_id = section.attr('id');   
+                        }
+                        
+                        if(scrolled_id !== id){
+                            id = scrolled_id;
+
+                            //$navbar__links.removeClass('navbar__link--current');
+
+                            $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current');
+                        }
+                    }
+                });
+
+                $(window).trigger('scroll');
+                
+                
+                // Media Query
+                var mediaquery = window.matchMedia('(max-width: 767px)')
+                
+                if (mediaquery.matches) {
+                    // Fijar la barra de navegacion
+                    $(window).scroll(() => {
+                        //console.log($(this).scrollTop())                  
+                        
+                        if ($(this).scrollTop() > 2279) {                     
+                            $('.scrolling-pointer').css({
+                                'position': 'fixed',
+                                'top': '0',
+                                'left': '0',
+                                'right': '0'
+                            })
+                            
+                            $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current')
+
+                        } else {
+                            $('.scrolling-pointer').css({
+                                'position': 'relative'
+                            })
+                            
+                            $navbar__links.removeClass('navbar__link--current')
+                        }
+                    })   
+                
+                } else {
+                    // Fijar la barra de navegacion
+                    $(window).scroll(() => {
+                        //console.log($(this).scrollTop())                  
+
+                        if ($(this).scrollTop() > 852) {                       
+                            $('.scrolling-pointer').css({
+                                'position': 'fixed',
+                                'top': '0',
+                                'left': '0',
+                                'right': '0'
+                            })
+                            
+                            $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current')
+
+                        } else {
+                            $('.scrolling-pointer').css({
+                                'position': 'relative'
+                            })
+
+                            $navbar__links.removeClass('navbar__link--current')
+                        }
+                    })                    
+                }
+                
+            })
+        </script>
+    </body>
+</html>
