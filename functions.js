@@ -32,8 +32,6 @@ $(document).ready(() => {
             if(scrolled_id !== id){
                 id = scrolled_id;
 
-                //$navbar__links.removeClass('navbar__link--current');
-
                 $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current');
             }
         }
